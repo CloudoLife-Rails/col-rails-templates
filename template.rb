@@ -15,7 +15,7 @@ end
 
 inject_into_file 'Gemfile' do
   <<-CODE
-    gemfiles = %w(Gemfiles/Gemfile-ext)
+    gemfiles = %w{Gemfiles/Gemfile-ext Gemfiles/Gemfile-ext}
     gemfiles.each do |gemfile|
       if File.exist?(gemfile)
         # or instance_eval File.read(gemfile)
@@ -30,6 +30,7 @@ end
 # copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
 copy_file "app/resources/application_resource.rb", "app/resources/application_resource.rb"
 
+copy_file "Gemfiles/Gemfile-excel", "Gemfiles/Gemfile-excel"
 copy_file "Gemfiles/Gemfile-ext", "Gemfiles/Gemfile-ext"
 
 # copy_file "config/database.pg.yml", "config/database.yml"

@@ -1,7 +1,4 @@
 
-# continuum/active_importer: Define importers that load tabular data from spreadsheets or CSV files into any ActiveRecord-like ORM.
-# https://github.com/continuum/active_importer
-gem 'active_importer' # , '0.2.6'
 
 # ClosureTree/closure_tree: Easily and efficiently make your ActiveRecord models support hierarchies
 # https://github.com/ClosureTree/closure_tree
@@ -20,8 +17,6 @@ gem 'responders'
 gem 'kaminari'
 
 gem 'pg'
-
-gem 'spreadsheet' # , '1.3.0'
 
 group :development do
   gem 'rubocop', '1.23.0'
