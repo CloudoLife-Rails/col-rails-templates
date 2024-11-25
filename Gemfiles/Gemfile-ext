@@ -2,7 +2,7 @@
 
 # ClosureTree/closure_tree: Easily and efficiently make your ActiveRecord models support hierarchies
 # https://github.com/ClosureTree/closure_tree
-gem 'closure_tree' # , 7.4.0
+gem 'closure_tree'
 
 # gem 'graphiti'
 gem 'graphiti-rails'
@@ -19,22 +19,21 @@ gem 'kaminari'
 gem 'pg'
 
 group :development do
-  gem 'rubocop', '1.23.0'
+  gem 'rubocop'
 end
 
 group :development, :test do
 
-  gem 'factory_bot_rails'#, '6.2.0'
+  gem 'factory_bot_rails'
 
-  gem 'faker'#, '2.19.0'
-  gem 'jsonapi-rspec'#, '0.0.11'
-  gem 'rspec-rails'#, '5.0.2'
+  gem 'faker'
+  gem 'jsonapi-rspec'
+  gem 'rspec-rails'
 
   # DatabaseCleaner/database_cleaner: Strategies for cleaning databases in Ruby. Can be used to ensure a clean state for testing.
   # https://github.com/DatabaseCleaner/database_cleaner
   #
   # DatabaseCleaner/database_cleaner-active_record: Strategies for cleaning databases using ActiveRecord. Can be used to ensure a clean state for testing.
   # https://github.com/DatabaseCleaner/database_cleaner-active_record
-  gem 'database_cleaner-active_record'#, '2.0.1'
+  gem 'database_cleaner-active_record'
 end
-

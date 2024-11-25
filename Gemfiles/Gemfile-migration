@@ -1,0 +1,10 @@
+
+
+# ankane/strong_migrations: Catch unsafe migrations in development
+# https://github.com/ankane/strong_migrations
+gem "strong_migrations"
+
+# gregnavis/active_record_doctor: Identify database issues before they hit production.
+# https://github.com/gregnavis/active_record_doctor
+gem 'active_record_doctor', group: [:development, :test]
+# gem 'active_record_doctor', github: 'gregnavis/active_record_doctor', group: [:development, :test]

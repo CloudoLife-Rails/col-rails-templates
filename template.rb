@@ -8,14 +8,19 @@
 # Add the current directory to the path Thor uses
 # to look up files
 def source_paths
-  Array(super) + 
+  Array(super) +
     [File.expand_path(File.dirname(__FILE__))]
 end
-  
+
+gemfiles = %W{
+  Gemfiles/Gemfile-excel
+  Gemfiles/Gemfile-ext
+  Gemfiles/Gemfile-migration
+}
 
 inject_into_file 'Gemfile' do
   <<-CODE
-    gemfiles = %w{Gemfiles/Gemfile-ext Gemfiles/Gemfile-ext}
+    gemfiles = %w{#{gemfiles.join(' ')}}
     gemfiles.each do |gemfile|
       if File.exist?(gemfile)
         # or instance_eval File.read(gemfile)
@@ -27,15 +32,27 @@ inject_into_file 'Gemfile' do
 CODE
 end
 
+gemfiles.each do |gemfile|
+  copy_file gemfile, gemfile
+end
+
+copy_file ".active_record_doctor.rb", ".active_record_doctor.rb"
+
+# run "rails generate strong_migrations:install"
+
 # copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
 copy_file "app/resources/application_resource.rb", "app/resources/application_resource.rb"
 
-copy_file "Gemfiles/Gemfile-excel", "Gemfiles/Gemfile-excel"
-copy_file "Gemfiles/Gemfile-ext", "Gemfiles/Gemfile-ext"
+
 
 # copy_file "config/database.pg.yml", "config/database.yml"
+
+copy_file "config/initializers/generators.rb", "config/initializers/generators.rb"
+copy_file "config/initializers/table_definition.rb", "config/initializers/table_definition.rb"
+
 # copy_file "db/sql/database.sql", "db/sql/database.sql"
 
 # copy_file "docker-compose.yml"
 
-copy_file ".tool-versions"
+
+# copy_file ".tool-versions"

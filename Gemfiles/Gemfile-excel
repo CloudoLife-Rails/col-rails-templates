@@ -10,7 +10,7 @@ gem 'caxlsx' #, '3.2.0'
 
 # weshatheleopard/rubyXL: Ruby lib for reading/writing/modifying .xlsx and .xlsm files
 # https://github.com/weshatheleopard/rubyXL
-gem 'rubyXL', # '3.4.25'
+gem 'rubyXL' #, '3.4.25'
 
 # Deprecated
 # zdavatz/spreadsheet: The Ruby Spreadsheet by ywesee GmbH
