@@ -37,8 +37,7 @@ gemfiles.each do |gemfile|
 end
 
 copy_file ".active_record_doctor.rb", ".active_record_doctor.rb"
-
-# run "rails generate strong_migrations:install"
+# copy_file ".tool-versions"
 
 # copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
 copy_file "app/resources/application_resource.rb", "app/resources/application_resource.rb"
@@ -54,5 +53,7 @@ copy_file "config/initializers/table_definition.rb", "config/initializers/table_
 
 # copy_file "docker-compose.yml"
 
-
-# copy_file ".tool-versions"
+#
+after_bundle do
+  generate('strong_migrations:install')
+end
