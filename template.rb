@@ -19,16 +19,17 @@ gemfiles = %W{
 }
 
 inject_into_file 'Gemfile' do
-  <<-CODE
-    gemfiles = %w{#{gemfiles.join(' ')}}
-    gemfiles.each do |gemfile|
-      if File.exist?(gemfile)
-        # or instance_eval File.read(gemfile)
-        eval_gemfile gemfile
-      else
-        puts("\e[31mWarning: " + gemfile + " not found!\e[0m")
-      end
-    end
+<<-CODE
+gemfiles = %w{#{gemfiles.join(' ')}}
+
+gemfiles.each do |gemfile|
+  if File.exist?(gemfile)
+    # or instance_eval File.read(gemfile)
+    eval_gemfile gemfile
+  else
+    puts("\e[31mWarning: " + gemfile + " not found!\e[0m")
+  end
+end
 CODE
 end
 
