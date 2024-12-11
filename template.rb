@@ -38,16 +38,18 @@ gemfiles.each do |gemfile|
 end
 
 copy_file ".active_record_doctor.rb", ".active_record_doctor.rb"
-# copy_file ".tool-versions"
+copy_file ".tool-versions", ".tool-versions"
 
 # copy_file "app/controllers/application_controller.rb", "app/controllers/application_controller.rb"
 copy_file "app/resources/application_resource.rb", "app/resources/application_resource.rb"
 
 
-
-# copy_file "config/database.pg.yml", "config/database.yml"
+copy_file "config/database.pg.yml", "config/database.pg.yml"
 
 copy_file "config/initializers/generators.rb", "config/initializers/generators.rb"
+
+copy_file "config/initializers/opentelemetry.rb", "config/initializers/opentelemetry.rb"
+
 copy_file "config/initializers/table_definition.rb", "config/initializers/table_definition.rb"
 
 # copy_file "db/sql/database.sql", "db/sql/database.sql"
