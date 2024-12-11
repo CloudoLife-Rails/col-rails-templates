@@ -37,3 +37,14 @@ group :development, :test do
   # https://github.com/DatabaseCleaner/database_cleaner-active_record
   gem 'database_cleaner-active_record'
 end
+
+# mbleigh/acts-as-taggable-on: A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
+# https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on'
+# rake acts_as_taggable_on_engine:install:migrations
+
+# ClosureTree/closure_tree: Easily and efficiently make your ActiveRecord models support hierarchies
+# https://github.com/ClosureTree/closure_tree
+gem 'closure_tree'
+# rails g migration AddParentIdTo[Tags]
+# rails g closure_tree:migration [tag]

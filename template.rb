@@ -57,4 +57,6 @@ copy_file "config/initializers/table_definition.rb", "config/initializers/table_
 #
 after_bundle do
   generate('strong_migrations:install')
+
+  # rake('acts_as_taggable_on_engine:install:migrations')
 end

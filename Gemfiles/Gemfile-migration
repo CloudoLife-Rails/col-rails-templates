@@ -1,5 +1,20 @@
 
 
+
+# @deprecated prior to Ruby 3.2.0
+# # ctran/annotate_models: Annotate Rails classes with schema and routes info
+# # https://github.com/ctran/annotate_models
+# group :development do
+#   gem 'annotate'
+# end
+
+# Support for Rails 3.2.0 and later
+# drwl/annotaterb: A Ruby Gem that adds annotations to your Rails models and route files.
+# https://github.com/drwl/annotaterb
+group :development do
+  gem 'annotaterb'
+end
+
 # ankane/strong_migrations: Catch unsafe migrations in development
 # https://github.com/ankane/strong_migrations
 gem "strong_migrations"
