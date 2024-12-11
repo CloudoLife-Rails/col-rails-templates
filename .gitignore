@@ -21,12 +21,15 @@
 !.tool-versions
 
 !app/**
+!config/**
 
+!.active_record_doctor.rb
 # !Gemfile
 # !Gemfile.lock
 
 !Gemfiles/**
 
+!README.md
 !template.rb
 
 col-rails-demo/

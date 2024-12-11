@@ -1,0 +1,7 @@
+
+
+gem 'opentelemetry-sdk'
+
+gem 'opentelemetry-instrumentation-all'
+
+gem 'opentelemetry-exporter-otlp'
